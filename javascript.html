@@ -4,9 +4,14 @@
     <head>
         <title>Yo!</title>
             <script>
-                function hello(){
-                alert('Hello world!');
-            }
+                function hello() {
+                if (document.querySelector('h1').innerHTML === 'hi') {
+                    document.querySelector('h1').innerHTML = 'goodbye';
+                }   else {
+                        document.querySelector('h1').innerHTML = 'hi';
+                    }
+                }
+                
             </script>
     </head>
     <body>
