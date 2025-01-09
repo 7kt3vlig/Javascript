@@ -12,4 +12,6 @@ function count() {
 // Ensure that the DOM is fully loaded before attaching the event
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('button').onclick = count;
+
+    setinterval(count, 1000);
 });
