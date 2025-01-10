@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animate</title>
+        <style>
+            @keyframes grow {
+                from {
+                    font-size: 20px;
+
+                }
+                to {
+                    font-size: 100px   ;
+                }
+            }
+            h1 {
+                animation-name: grow;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        </style>
+           <script>
+            
+             
+           </script>
+    </head>
+    <body> 
+        <h1 > Welcome  </h1>
+        
+    </body>
+</html>
+
+<script>
+    document.addEventListener('click', event => {
+        const element = event.target;
+        if (element.className === 'hide') {
+            element.parentElement.style.animationPlayState = 'running';
+            element.parentElement.addEventListener('animationend', () => {
+                element.parentElement.remove();
+            })
+        }
+    })
+</script>
